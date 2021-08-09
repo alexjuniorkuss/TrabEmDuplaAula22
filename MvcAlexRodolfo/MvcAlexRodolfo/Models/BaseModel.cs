@@ -8,6 +8,7 @@ namespace MvcAlexRodolfo.Models
     public abstract class BaseModel
     {
         public int Id { get; set; }
+       
         public decimal Valor { get; set; }
     }
 }

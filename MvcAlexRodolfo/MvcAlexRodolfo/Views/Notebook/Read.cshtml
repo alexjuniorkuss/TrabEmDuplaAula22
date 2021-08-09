@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<MvcAlexRodolfo.Models.Notebook>
 
 @{
-    ViewBag.Title = "Read";
+    ViewBag.Title = "Lista de Notebooks";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Read</h2>
+<h2>Lista de Notebooks</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Novo", "Create") |
+    @Html.ActionLink("Voltar", "Index")
 </p>
 <table class="table">
     <tr>
@@ -36,9 +37,9 @@
             @Html.DisplayFor(modelItem => item.Modelo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Update", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Update", new { id=item.Id }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

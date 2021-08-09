@@ -169,18 +169,18 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Jogos\Create.cshtml" />
     <Content Include="Views\Jogos\Read.cshtml" />
-    <Content Include="Views\Jogos\Update.cshtml" />
     <Content Include="Views\Jogos\Delete.cshtml" />
     <Content Include="Views\Jogos\Details.cshtml" />
-    <Content Include="Views\Notebook\Create.cshtml" />
-    <Content Include="Views\Notebook\Read.cshtml" />
-    <Content Include="Views\Notebook\Update.cshtml" />
-    <Content Include="Views\Notebook\Delete.cshtml" />
-    <Content Include="Views\Notebook\Details.cshtml" />
     <Content Include="Views\Jogos\Index.cshtml" />
     <Content Include="Views\Notebook\Index.cshtml" />
+    <Content Include="Views\Notebook\Create.cshtml" />
+    <Content Include="Views\Notebook\Read.cshtml" />
+    <Content Include="Views\Notebook\Details.cshtml" />
+    <Content Include="Views\Notebook\Delete.cshtml" />
+    <Content Include="Views\Notebook\Update.cshtml" />
+    <Content Include="Views\Jogos\Create.cshtml" />
+    <Content Include="Views\Jogos\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

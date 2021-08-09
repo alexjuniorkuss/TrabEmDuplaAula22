@@ -26,7 +26,7 @@ namespace MvcAlexRodolfo.Controllers
         {
             return View();
         }
-        //[HttpPost]
+        [HttpPost]
         public ActionResult Create(M model)
         {
             repository.Create(model);
