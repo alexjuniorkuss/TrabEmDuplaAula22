@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MvcAlexRodolfo.Repository
 {
-    public class JogosRepository : BaseRepository<Jogos>
+    public class JogosRepository : BaseDAO<Jogos>
     {
     }
 }

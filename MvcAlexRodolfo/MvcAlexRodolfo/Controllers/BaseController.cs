@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace MvcAlexRodolfo.Controllers
 {
-    public abstract class BaseController<M, R> : Controller where M : BaseModel where R : BaseRepository<M>
+    public abstract class BaseController<M, R> : Controller where M : BaseModel where R : BaseDAO<M>
     {
         R repository;
         //construtor
