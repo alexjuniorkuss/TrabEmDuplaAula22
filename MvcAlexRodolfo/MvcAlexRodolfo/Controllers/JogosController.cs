@@ -7,9 +7,9 @@ using System.Web;
 
 namespace MvcAlexRodolfo.Controllers
 {
-    public class JogosController : BaseController<Jogos, JogosRepository>
+    public class JogosController : BaseController<Jogos, JogosDAO>
     {
-        public JogosController():base(new JogosRepository())
+        public JogosController():base(new JogosDAO())
         {
 
         }

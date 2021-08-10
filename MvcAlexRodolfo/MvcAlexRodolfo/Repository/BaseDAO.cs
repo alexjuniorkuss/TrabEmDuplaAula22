@@ -9,25 +9,23 @@ namespace MvcAlexRodolfo.Repository
 {
     public class BaseDAO<T> where T : BaseModel
     {
-        private string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GitHub\TrabEmDuplaAula22\MvcAlexRodolfo\MvcAlexRodolfo\App_Data\Cadastros.mdf;Integrated Security=True";
+        protected string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GitHub\TrabEmDuplaAula22\MvcAlexRodolfo\MvcAlexRodolfo\App_Data\Cadastros.mdf;Integrated Security=True";
         private static List<T> List = new List<T>();
         private static int Id = 1;
 
-        public void Create(T model)
+        public virtual void Create(T model)
         {
-            model.Id = Id;
-            Id++;
             List.Add(model);
         }
-        public List<T> Read()
+        public virtual List<T> Read()
         {
             return List;
         }
-        public T Read(int Id)
+        public virtual T Read(int Id)
         {
             return List.Find(l => l.Id == Id);
         }
-        public void Update(T model)
+        public virtual void Update(T model)
         {
             int index = List.FindIndex(l => l.Id == model.Id);
             if (index != -1)
@@ -35,7 +33,7 @@ namespace MvcAlexRodolfo.Repository
                 List[index] = model;
             }
         }
-        public void Delete(T model)
+        public virtual void Delete(T model)
         {
             int index = List.FindIndex(l => l.Id == model.Id);
                 if (index != -1)
@@ -43,14 +41,18 @@ namespace MvcAlexRodolfo.Repository
                     List.Remove(model);
                 }
         }
-        private void ExeNoQuery(string comando)
+        public virtual void ExecNonQuery(string comando)
         {
-            using (var conn= new SqlConnection(ConnectionString))
+            using (var conn = new SqlConnection(ConnectionString))
             {
                 conn.Open();
-
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = conn;
+                    command.CommandText = comando;
+                    command.ExecuteNonQuery();
+                }
             }
         }
-
     }
 }

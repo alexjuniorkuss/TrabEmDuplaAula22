@@ -7,9 +7,9 @@ using System.Web;
 
 namespace MvcAlexRodolfo.Controllers
 {
-    public class NotebookController: BaseController<Notebook, NotebookRepository>
+    public class NotebookController : BaseController<Notebook, NotebookDAO>
     {
-        public NotebookController() : base(new NotebookRepository())
+        public NotebookController() : base(new NotebookDAO())
         {
 
         }

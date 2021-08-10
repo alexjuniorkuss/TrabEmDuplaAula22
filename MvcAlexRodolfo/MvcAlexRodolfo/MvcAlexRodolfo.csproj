@@ -135,8 +135,8 @@
     <Compile Include="Models\Notebook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseDAO.cs" />
-    <Compile Include="Repository\JogosRepository.cs" />
-    <Compile Include="Repository\NotebookRepository.cs" />
+    <Compile Include="Repository\JogosDAO.cs" />
+    <Compile Include="Repository\NotebookDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Cadastros.mdf" />
